@@ -26,6 +26,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+	res.send('Express is running');
+});
 
 app.get('/init', (req, res) => {
 	db.collection(collName).find().toArray((err, data) => {
