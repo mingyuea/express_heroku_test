@@ -4,7 +4,7 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
 const assert = require('assert');
 
-const dbUrl = 'mongodb://mingyue:Secure1@ds133920.mlab.com:33920/expresstestdb';
+const dbUrl = process.env.MONGODB_URI || 'mongodb://mingyue:Secure1@ds133920.mlab.com:33920/expresstestdb';
 const dbName = 'expresstestdb';
 const collName = 'quotes';
 
